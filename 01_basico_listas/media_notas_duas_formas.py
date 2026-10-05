@@ -1,20 +1,19 @@
-notas = [8.5, 4.0, 6.0, 9.5, 3.5, 7.0]
-acumulador = 0
+notas = [8.5, 4.0, 9.0, 6.5, 3.0, 7.0, 10.0]
 
-for i in notas:
-    acumulador = acumulador + i
-media = acumulador / len(notas)
-print(f"A média é {media: .2f}")
+quantidade = 0
+total = 0
 
-acumulador = 0
+for nota in notas:
+    total += nota
+    quantidade += 1
+
+media = total / quantidade
+print(f"A média da turma é: {media:.2f}")
+""
+total = 0
 
 for i in range(len(notas)):
-    acumulador = acumulador + notas[i]
-media = acumulador / len(notas)
-print(f"A média é {media: .2f}")
+    total += notas[i]
 
-for i in range(len(notas)):
-    if notas[i] >= 6:
-        print(f"Aluno {i+1}: Aprovado")
-    else:
-        print(f"Aluno {i+1}: Reprovado")
+media = total / len(notas)
+print(f"A média da turma é: {media:.2f}")
